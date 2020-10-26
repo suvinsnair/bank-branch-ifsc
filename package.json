@@ -1,0 +1,31 @@
+{
+  "name": "ifscbranch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suvinsnair/bank-branch-ifsc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suvinsnair/bank-branch-ifsc/issues"
+  },
+  "homepage": "https://github.com/suvinsnair/bank-branch-ifsc#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.31.0",
+    "webpack-notifier": "^1.8.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
