@@ -1,6 +1,9 @@
 {
   "entrypoints": {
     "js/custom": {
+      "css": [
+        "/build/js/custom.css"
+      ],
       "js": [
         "/build/js/custom.js"
       ]
