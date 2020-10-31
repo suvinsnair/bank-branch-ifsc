@@ -15,57 +15,86 @@
 			background: #F5F5F5;
 			padding: 2px 6px;
 		}
-	</style>
-	<h1 align="center" class="text-primary">Bank IFSC Codes</h1>	
 
-<div class="col-lg-6 col-md-6 col-xs-6">
-<label>Bank</label>
-  <select class="custom-select" id="bank">
-    <option selected>Choose Bank...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  
-</div>
-<br/>
-<div class="col-lg-6 col-md-6 col-xs-6">
-<label>State</label>
-  <select class="custom-select" id="state">
-    <option selected>Choose State...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  
-</div>
-<br/>
-<div class="col-lg-6 col-md-6 col-xs-6">
-<label>District</label>
-  <select class="custom-select" id="district">
-    <option selected>Choose District...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  
-</div>
-<br/>
-<div class="col-lg-6 col-md-6 col-xs-6">
-<label>Place</label>
-  <select class="custom-select" id="place">
-    <option selected>Choose Place...</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
-  
-</div>
-	
+		body,
+		html {
+			height: 100%;
+		}
+		.bg-image-bank {
+
+			/* The image used */
+			background-image: url("../images/bank_background.jpg");
+
+
+			/* Full height */
+			height: 100%;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+{% set currentPath = path(app.request.attributes.get('_route'),
+                       app.request.attributes.get('_route_params')) %}
+
+<img src={{currentPath}} alt="Girl in a jacket" width="500" height="600">
+
+
+
+
+	<h1 align="center" class="text-primary">Bank IFSC Codes</h1>
+
+	<div class="bg-image-bank"></div>
+
+	<div class="col-lg-6 col-md-6 col-xs-6">
+		<label>Bank</label>
+		<select class="custom-select" id="bank">
+			<option selected>Choose Bank...</option>
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
+
+	</div>
+	<br/>
+	<div class="col-lg-6 col-md-6 col-xs-6">
+		<label>State</label>
+		<select class="custom-select" id="state">
+			<option selected>Choose State...</option>
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
+
+	</div>
+	<br/>
+	<div class="col-lg-6 col-md-6 col-xs-6">
+		<label>District</label>
+		<select class="custom-select" id="district">
+			<option selected>Choose District...</option>
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
+
+	</div>
+	<br/>
+	<div class="col-lg-6 col-md-6 col-xs-6">
+		<label>Place</label>
+		<select class="custom-select" id="place">
+			<option selected>Choose Place...</option>
+			<option value="1">One</option>
+			<option value="2">Two</option>
+			<option value="3">Three</option>
+		</select>
+
+	</div>
+
 {% endblock %}
 {% block javascripts %}
-<script>
-$(document).ready(function(){
+	<script>
+		$(document).ready(function () {
 $('#bank').select2();
 $('#state').select2();
 $('#district').select2();
@@ -73,5 +102,5 @@ $('#place').select2();
 
 
 });
-</script>
+	</script>
 {% endblock %}
