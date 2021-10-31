@@ -16,4 +16,14 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    
+    /**
+     * @Route("/create-branch", name="create_bbranch")
+     */
+    public function createBranchNew()
+    {
+        return $this->render('home/new.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
