@@ -26,4 +26,14 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+    
+    /**
+     * @Route("/status", name="status")
+     */
+    public function createBranchNew()
+    {
+        return $this->render('home/status-check.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
